@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listagemFragment">
+
+    <fragment
+        android:id="@+id/listagemFragment"
+        android:name="br.com.faculdadeimpacta.laboratorio16.ui.fragments.ListagemFragment"
+        android:label="fragment_listagem"
+        tools:layout="@layout/fragment_listagem">
+        <action
+            android:id="@+id/action_listagemFragment_to_detalhesFragment"
+            app:destination="@id/detalhesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalhesFragment"
+        android:name="br.com.faculdadeimpacta.laboratorio16.ui.fragments.DetalhesFragment"
+        android:label="fragment_detalhes"
+        tools:layout="@layout/fragment_detalhes">
+        <argument
+            android:name="contatoId"
+            app:argType="integer" />
+    </fragment>
+</navigation>
